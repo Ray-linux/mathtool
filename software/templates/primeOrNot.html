@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container my-4">
+    <h2>Find Prime or Not</h2>
+</div>
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <form method="post">
+                {% csrf_token %}
+                <label>Value</lable>
+                    <br>
+                <input type="text" name="num" Value="{{num}}" class="from-control">
+                <br>
+                <button type="submit" class="btn btn-success my-3">Define</button>
+                <br>
+                <lable>Output</lable>
+                <input type="text" class="form-control" Value="{{output}}">
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

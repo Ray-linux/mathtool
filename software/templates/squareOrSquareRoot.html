@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container my-4">
+    <h2>Find Square or Square root</h2>
+</div>
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <form method="post">
+                {% csrf_token %}
+                <label>Value</lable>
+                <br>
+                <input type="text" name="num" value="{{num}}" class="form-control">
+                <br>
+                <select name="opr"  class="form-select form-control">
+                    <option selected>Select anyone</option>
+                    <option value="*">Square</option>
+                    <option value="/">Square root</option>
+                </select>
+
+                <button type="submit" class="btn btn-success my-3">Define</button>
+                <br>
+                <lable>Output</lable>
+                <input type="text" class="form-control" Value="{{output}}">
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
